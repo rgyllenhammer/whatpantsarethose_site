@@ -1,0 +1,25 @@
+<html>
+    style. 
+        body {
+            font-family: monospace;
+            padding: 2%;
+        }
+
+        .header{
+            text-align: center;
+        }
+
+    <body>
+        <div class="header">
+            <h1> whatpantsarethose </h1>
+            <p>created by @ranchgod</p>
+            <p>data from @whatpantsarethose</p>
+            <p>like some pants? find them here</p>
+        </div>
+        each post in posts
+            h2=post['_id']['skater'] + ' (' + post['postCount'] + ' hits)'
+            each skaterPost in post['data']
+                p=skaterPost['pants'] + ' '
+                    a(href=skaterPost["url"]) #{skaterPost['url']}
+    </body>
+</html>
