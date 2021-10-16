@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
                 {
                     _id :{ skater : '$Skater' },
                     postCount : { $sum : 1},
-                    data: { $push : {pants: "$Pants", url: "$Post Url"} }
+                    data: { $push : { pants: "$Pants", url: "$Post Url" } }
                 }
             }
         ]);
@@ -24,6 +24,16 @@ router.get('/', async (req, res) => {
     } catch (err) {
         console.log(err);
     }
+});
+
+router.get('/:skater', async (req, res) => {
+    const params = req.params;
+    const skater = '@' + params['skater'];
+
+    posts = await Post.find({'Skater': skater});
+
+    res.render("skater", { skaterName : skater, posts : posts });
+
 });
 
 
