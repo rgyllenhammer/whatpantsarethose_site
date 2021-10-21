@@ -4,16 +4,8 @@
             include static/css/index.css
     </head>
     <body>
-        <div id='search-bar'>
-            <input id='skater-search' type ='text' placeholder='search ig handle, eg: karlberglind'/>
-            <button id='skater-search-submit'> search </button>
-        </div>
-        <div class="header">
-            <h1> whatpantsarethose </h1>
-            <p>created by @ranchgod</p>
-            <p>data from @whatpantsarethose</p>
-            <p>like some pants? find them here</p>
-        </div>
+        include search_bar.pug
+        include header.pug
         each post in posts
             h2=post['_id']['skater'] + ' (' + post['postCount'] + ' hits)'
             each skaterPost in post['data']

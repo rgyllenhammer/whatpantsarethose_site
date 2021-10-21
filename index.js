@@ -23,7 +23,7 @@ app.use('/find', pantsPath);
 
 // home view
 app.get('/', (req, res) => {
-    res.send('Hello worllll');
+    res.render("index");
 });
 
 // db connection

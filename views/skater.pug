@@ -1,0 +1,28 @@
+<html>
+    <head>
+        style
+            include static/css/index.css
+    </head>
+    style. 
+        body {
+            font-family: monospace;
+            padding: 2%;
+        }
+
+        .header{
+            text-align: center;
+        }
+
+    <body>
+        <a href='/find'> <- back </a>
+        <div class="header">
+            h1=skaterName
+        </div>
+
+        p=noPosts
+
+        each post in posts
+            p=post['Pants'] + ' => '
+                a(href=post["Post Url"]) #{post['Post Url']}
+    </body>
+</html>
