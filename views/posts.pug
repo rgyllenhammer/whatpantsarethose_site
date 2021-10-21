@@ -4,7 +4,12 @@
             include static/css/index.css
     </head>
     <body>
-        include search_bar.pug
+
+        <div>
+            <div id='back-button'> <a href='/'>home</a> </div>
+                include search_bar.pug
+        </div>
+
         include header.pug
         each post in posts
             h2=post['_id']['skater'] + ' (' + post['postCount'] + ' hits)'

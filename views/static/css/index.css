@@ -4,6 +4,7 @@ body {
 }
 
 .header {
+    margin-top: 3%;
     text-align: center;
 }
 
@@ -12,9 +13,14 @@ body {
 }
 
 #search-bar {
+    float: right;
     text-align: right;
 }
 
+#back-button {
+    float: left;
+}
+
 #skater-search {
-    width: 20%;
+    width: 300px;
 }
