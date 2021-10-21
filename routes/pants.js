@@ -4,6 +4,7 @@ const Post = require('../models/Post');
 
 // matching on an empty query returns all documents
 const emptyQuery = {};
+const noPostsString = 'No posts yet unfortunately. Tag @whatpantsarethose and tell him to post '
 
 router.get('/', async (req, res) => {
     try {
@@ -32,7 +33,7 @@ router.get('/:skater', async (req, res) => {
 
     posts = await Post.find({'Skater': skater});
 
-    res.render("skater", { skaterName : skater, posts : posts });
+    res.render("skater", { skaterName : skater, posts : posts, noPosts: posts.length == 0 ? (noPostsString + skater)  : '' });
 
 });
 

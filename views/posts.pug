@@ -1,15 +1,13 @@
 <html>
-    style. 
-        body {
-            font-family: monospace;
-            padding: 2%;
-        }
-
-        .header{
-            text-align: center;
-        }
-
+    <head>
+        style
+            include static/css/index.css
+    </head>
     <body>
+        <div id='search-bar'>
+            <input id='skater-search' type ='text' placeholder='search ig handle, eg: karlberglind'/>
+            <button id='skater-search-submit'> search </button>
+        </div>
         <div class="header">
             <h1> whatpantsarethose </h1>
             <p>created by @ranchgod</p>
@@ -21,5 +19,7 @@
             each skaterPost in post['data']
                 p=skaterPost['pants'] + ' '
                     a(href=skaterPost["url"]) #{skaterPost['url']}
+        script
+            include static/js/search.js
     </body>
 </html>
