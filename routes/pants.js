@@ -17,7 +17,8 @@ router.get('/', async (req, res) => {
                     postCount : { $sum : 1},
                     data: { $push : { pants: "$Pants", url: "$Post Url" } }
                 }
-            }
+            },
+            { $sort : { _id : -1 }}
         ]);
 
         res.render("posts", { posts: posts });

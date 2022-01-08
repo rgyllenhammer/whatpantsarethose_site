@@ -4,7 +4,8 @@ body {
 }
 
 .header {
-    margin-top: 3%;
+    margin-top: 5%;
+    margin-bottom: 5%;
     text-align: center;
 }
 
@@ -22,5 +23,5 @@ body {
 }
 
 #skater-search {
-    width: 300px;
+    width: 400px;
 }

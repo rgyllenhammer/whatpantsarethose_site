@@ -18,5 +18,8 @@
         each post in posts
             p=post['Pants'] + ' => '
                 a(href=post["Post Url"]) #{post['Post Url']}
+
+        script
+            include static/js/search.js
     </body>
 </html>
