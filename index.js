@@ -23,7 +23,7 @@ app.use('/whatpantsarethose', pantsPath);
 
 // home view
 app.get('/', (req, res) => {
-    res.render("index");
+    res.render("reese_index");
 });
 
 // db connection
