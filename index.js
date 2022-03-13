@@ -19,7 +19,7 @@ const password = process.env.DB_PASSWORD;
 const database = process.env.DB_NAME
 
 // set website path
-app.use('/find', pantsPath);
+app.use('/whatpantsarethose', pantsPath);
 
 // home view
 app.get('/', (req, res) => {
